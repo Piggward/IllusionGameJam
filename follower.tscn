@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2o3i1h73rjtg"]
+
+[ext_resource type="Script" uid="uid://ubhmlteges50" path="res://follower.gd" id="1_ow3j3"]
+
+[sub_resource type="Curve2D" id="Curve2D_kek77"]
+
+[node name="Follower" type="Path2D"]
+curve = SubResource("Curve2D_kek77")
+script = ExtResource("1_ow3j3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
