@@ -5,6 +5,7 @@ extends Path2D
 
 const SPEED_3 = 42.5
 const BASE_SPEED = 14.167
+@export var speed: float
 
 func _ready():
 	curve.clear_points()

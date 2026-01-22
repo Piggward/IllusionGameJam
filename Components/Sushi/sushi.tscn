@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs4ddgyko43ea"]
+
+[ext_resource type="Script" uid="uid://ldmm6lw70526" path="res://Components/Sushi/sushi.gd" id="1_6ywq2"]
+
+[node name="Sushi" type="Node2D"]
+script = ExtResource("1_6ywq2")
+sushi_type = 5
+
+[node name="SushiSprite" type="Sprite2D" parent="."]

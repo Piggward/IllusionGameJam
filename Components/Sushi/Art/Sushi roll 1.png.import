@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdheubrfunaaa"
-path="res://.godot/imported/Wasabi.png-05f8dff89ad2c467125a8d2b7e70e348.ctex"
+uid="uid://c24nqjtivjydl"
+path="res://.godot/imported/Sushi roll 1.png-d9d9e63284264e2fa7fa70d5bc9bca57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/items/Wasabi.png"
-dest_files=["res://.godot/imported/Wasabi.png-05f8dff89ad2c467125a8d2b7e70e348.ctex"]
+source_file="res://Components/Sushi/Art/Sushi roll 1.png"
+dest_files=["res://.godot/imported/Sushi roll 1.png-d9d9e63284264e2fa7fa70d5bc9bca57.ctex"]
 
 [params]
 

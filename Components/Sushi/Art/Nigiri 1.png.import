@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dko7cup46twmo"
-path="res://.godot/imported/Nigiri 3.png-50f8706f262fad7f85dff22920de1686.ctex"
+uid="uid://dxh10j1lgmq1j"
+path="res://.godot/imported/Nigiri 1.png-7dcb0a19e9be5d91c8454e14877c6c2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/items/Nigiri 3.png"
-dest_files=["res://.godot/imported/Nigiri 3.png-50f8706f262fad7f85dff22920de1686.ctex"]
+source_file="res://Components/Sushi/Art/Nigiri 1.png"
+dest_files=["res://.godot/imported/Nigiri 1.png-7dcb0a19e9be5d91c8454e14877c6c2b.ctex"]
 
 [params]
 

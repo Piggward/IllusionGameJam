@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxqdvcmdjksa5"]
-
-[ext_resource type="Texture2D" uid="uid://b63b3jl16ekby" path="res://art/items/belt_trans.png" id="1_susb0"]
-
-[node name="Belt" type="Sprite2D"]
-scale = Vector2(1.25, 1.25)
-texture = ExtResource("1_susb0")

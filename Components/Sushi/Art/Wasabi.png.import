@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dffuh0rjnxay0"
-path="res://.godot/imported/Onigiri.png-51c42d9f852c96c424d36633e1ba1f9e.ctex"
+uid="uid://cdheubrfunaaa"
+path="res://.godot/imported/Wasabi.png-fd843fa80985c905cd53ca7838dd59ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/items/Onigiri.png"
-dest_files=["res://.godot/imported/Onigiri.png-51c42d9f852c96c424d36633e1ba1f9e.ctex"]
+source_file="res://Components/Sushi/Art/Wasabi.png"
+dest_files=["res://.godot/imported/Wasabi.png-fd843fa80985c905cd53ca7838dd59ed.ctex"]
 
 [params]
 

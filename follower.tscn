@@ -5,6 +5,7 @@
 [sub_resource type="Curve2D" id="Curve2D_kek77"]
 
 [node name="Follower" type="Path2D"]
+z_index = 70
 curve = SubResource("Curve2D_kek77")
 script = ExtResource("1_ow3j3")
 

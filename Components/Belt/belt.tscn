@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckgrd55086uxr"]
+
+[ext_resource type="Texture2D" uid="uid://bit6c4wkdsgkk" path="res://art/GreenPart.png" id="1_5okuc"]
+[ext_resource type="Script" uid="uid://clmdbfemgdvoa" path="res://conveyor_part.gd" id="2_ut4i0"]
+[ext_resource type="Shader" uid="uid://8r1gkyxxlybl" path="res://moving_line2d.gdshader" id="3_bfp7v"]
+[ext_resource type="Texture2D" uid="uid://b14eug2we0q4i" path="res://art/items/belt12.png" id="4_u4via"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("3_bfp7v")
+shader_parameter/color = Color(0.3647059, 0.75686276, 0.5647059, 1)
+shader_parameter/speed = Vector2(0, 0)
+shader_parameter/alpha = 1.0
+shader_parameter/speed2 = Vector2(0, 0)
+
+[node name="GreenPart" type="Sprite2D" node_paths=PackedStringArray("conveyor")]
+texture_filter = 1
+scale = Vector2(0.67117256, 0.67117256)
+texture = ExtResource("1_5okuc")
+script = ExtResource("2_ut4i0")
+conveyor = NodePath("Green")
+
+[node name="Green" type="Line2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_7mycd")
+points = PackedVector2Array(-345.66373, 278.61688, 272.65717, 277.12695, 23.838877, -134.09369)
+width = 60.0
+texture = ExtResource("4_u4via")
+texture_mode = 1
+joint_mode = 2
+
+[node name="InnerArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InnerArea"]
+polygon = PackedVector2Array(26.818737, -80.45621, 70.0267, -105.78502, 266.69742, 224.9794, 213.05997, 238.38876)
+
+[connection signal="area_entered" from="InnerArea" to="." method="_on_inner_area_area_entered"]
+[connection signal="area_exited" from="InnerArea" to="." method="_on_inner_area_area_exited"]

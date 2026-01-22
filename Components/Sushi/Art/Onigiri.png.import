@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26icmhq5oy3c"
-path="res://.godot/imported/Sushi roll 4.png-469dffacd519d8a5ca840071bb638f9e.ctex"
+uid="uid://dffuh0rjnxay0"
+path="res://.godot/imported/Onigiri.png-5d9b27d6a998b187e4210a103b48aa2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/items/Sushi roll 4.png"
-dest_files=["res://.godot/imported/Sushi roll 4.png-469dffacd519d8a5ca840071bb638f9e.ctex"]
+source_file="res://Components/Sushi/Art/Onigiri.png"
+dest_files=["res://.godot/imported/Onigiri.png-5d9b27d6a998b187e4210a103b48aa2b.ctex"]
 
 [params]
 
