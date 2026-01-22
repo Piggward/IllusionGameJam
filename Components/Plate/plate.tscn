@@ -34,6 +34,7 @@ color = Color(0.4563535, 0.8821437, 0.030994663, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jeug"]
 
 [node name="Plate" type="Node2D"]
+top_level = true
 script = ExtResource("1_0jeug")
 
 [node name="AvailablePanel" type="Panel" parent="."]

@@ -11,8 +11,12 @@ func _ready():
 	curve.clear_points()
 	for p in follow_line.points:
 		curve.add_point(p)
+		
+func update_follow_line(line: Line2D):
+	follow_line = line
 	
 func _process(delta):
+	print(follow_line)
 	path_follow_2d.progress += delta * BASE_SPEED * 4.85
 	#self.global_position = path_follow_2d.global_position
 	#self.position.x += 42 * delta

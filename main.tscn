@@ -1,15 +1,13 @@
-[gd_scene load_steps=69 format=4 uid="uid://b6tckfocavm3u"]
+[gd_scene load_steps=77 format=4 uid="uid://b6tckfocavm3u"]
 
 [ext_resource type="Shader" uid="uid://8r1gkyxxlybl" path="res://moving_line2d.gdshader" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b2nrp71jn450q" path="res://art/tilesets/tileset_B.png" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://c24nqjtivjydl" path="res://Components/Sushi/Art/Sushi roll 1.png" id="2_yaehf"]
 [ext_resource type="Texture2D" uid="uid://e021ai4u7u62" path="res://art/tilesets/tileset_C.png" id="2_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://ckgrd55086uxr" path="res://Components/Belt/belt.tscn" id="3_0odxb"]
-[ext_resource type="Texture2D" uid="uid://b14eug2we0q4i" path="res://art/items/belt12.png" id="4_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dg2r3jvhc0s0k" path="res://Components/Belt/yellow_part.tscn" id="4_0odxb"]
 [ext_resource type="Texture2D" uid="uid://e2hh12br10lh" path="res://art/o4-color.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dxh10j1lgmq1j" path="res://Components/Sushi/Art/Nigiri 1.png" id="5_82xsv"]
-[ext_resource type="Texture2D" uid="uid://dp8ij1htinkrj" path="res://art/YellowPart.png" id="5_272bh"]
-[ext_resource type="Texture2D" uid="uid://cyb50lyckq0j8" path="res://art/OrangePart.png" id="6_5vw27"]
 [ext_resource type="Script" uid="uid://clmdbfemgdvoa" path="res://conveyor_part.gd" id="7_4c57u"]
 [ext_resource type="Texture2D" uid="uid://cdheubrfunaaa" path="res://Components/Sushi/Art/Wasabi.png" id="7_ryguw"]
 [ext_resource type="Texture2D" uid="uid://cox3uqa6q6g1q" path="res://art/Outline2.png" id="9_1u8w0"]
@@ -3790,19 +3788,18 @@ width = 32
 height = 32
 fill_from = Vector2(0.55140185, 0.12149533)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
-shader = ExtResource("1_0xm2m")
-shader_parameter/color = Color(0.9607843, 0.85490197, 0.654902, 1)
-shader_parameter/speed = Vector2(0, 0)
-shader_parameter/alpha = 1.0
-shader_parameter/speed2 = Vector2(0, 0)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lswn8"]
+load_path = "res://.godot/imported/OrangePart.png-11fc61ccbfc737a726f9bbb0bec02d62.ctex"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a6jrf"]
 shader = ExtResource("1_0xm2m")
 shader_parameter/color = Color(0.9529412, 0.654902, 0.5294118, 1)
 shader_parameter/speed = Vector2(0, 0)
 shader_parameter/alpha = 1.0
 shader_parameter/speed2 = Vector2(0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuqvo"]
+load_path = "res://.godot/imported/belt12.png-3800dbcd74dcf4e8eade086144ff4ba1.ctex"
 
 [sub_resource type="Image" id="Image_0odxb"]
 data = {
@@ -3834,6 +3831,38 @@ gravity = Vector3(0, 0, 0)
 scale_min = 2.0
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_kek77")
+
+[sub_resource type="Curve2D" id="Curve2D_d13ii"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qsp4k"]
+load_path = "res://.godot/imported/GreenPart.png-7d5be256b3839d820d20d98ad84ca8db.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kq58d"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/color = Color(0.3647059, 0.75686276, 0.5647059, 1)
+shader_parameter/speed = Vector2(0, 0)
+shader_parameter/alpha = 1.0
+shader_parameter/speed2 = Vector2(0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_seu75"]
+load_path = "res://.godot/imported/belt12.png-3800dbcd74dcf4e8eade086144ff4ba1.ctex"
+
+[sub_resource type="Curve2D" id="Curve2D_1u8w0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d13ii"]
+load_path = "res://.godot/imported/YellowPart.png-8c5e790852bdc87f213096a8f16388a8.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1u8w0"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/color = Color(0.9607843, 0.85490197, 0.654902, 1)
+shader_parameter/speed = Vector2(0, 0)
+shader_parameter/alpha = 1.0
+shader_parameter/speed2 = Vector2(0, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0odxb"]
+load_path = "res://.godot/imported/belt12.png-3800dbcd74dcf4e8eade086144ff4ba1.ctex"
+
+[sub_resource type="Curve2D" id="Curve2D_0odxb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
 texture = ExtResource("1_kek77")
@@ -9722,7 +9751,7 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(526, 324)
-zoom = Vector2(1.25, 1.25)
+zoom = Vector2(0.5, 0.5)
 
 [node name="Lighting" type="Node2D" parent="."]
 
@@ -9764,41 +9793,22 @@ texture = SubResource("GradientTexture2D_a6jrf")
 
 [node name="Conveyor" type="Node2D" parent="."]
 
-[node name="GreenPart" parent="Conveyor" instance=ExtResource("3_0odxb")]
-position = Vector2(531, 329)
-
-[node name="YellowPart" type="Sprite2D" parent="Conveyor" node_paths=PackedStringArray("conveyor")]
-texture_filter = 1
-position = Vector2(531, 329)
-scale = Vector2(0.67117256, 0.67117256)
-texture = ExtResource("5_272bh")
-script = ExtResource("7_4c57u")
-conveyor = NodePath("Yellow")
-
-[node name="Yellow" type="Line2D" parent="Conveyor/YellowPart"]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_1bvp3")
-points = PackedVector2Array(347.1537, 259.2478, 28.308655, -238.38875, -193.69086, 138.56348)
-width = 65.0
-texture = ExtResource("4_5vw27")
-texture_mode = 1
-joint_mode = 2
-
 [node name="OrangePart" type="Sprite2D" parent="Conveyor" node_paths=PackedStringArray("conveyor")]
 texture_filter = 1
 position = Vector2(531, 329)
 scale = Vector2(0.67117256, 0.67117256)
-texture = ExtResource("6_5vw27")
+texture = SubResource("CompressedTexture2D_lswn8")
 script = ExtResource("7_4c57u")
 conveyor = NodePath("Orange")
+conveyor_type = 1
 
 [node name="Orange" type="Line2D" parent="Conveyor/OrangePart"]
 texture_repeat = 2
-material = SubResource("ShaderMaterial_272bh")
+material = SubResource("ShaderMaterial_a6jrf")
 position = Vector2(0, -1.4899298)
-points = PackedVector2Array(0, -335.2342, -257.3567, 116.32431, -280.10678, 154.9527, -300.38422, 191.82047, -286.0665, 214.54993, -254.77795, 213.06, -220.50958, 214.54993, 178.79156, 213.06)
+points = PackedVector2Array(0, -332.25433, -257.3567, 116.32431, -280.10678, 154.9527, -300.38422, 191.82047, -286.0665, 214.54993, -254.77795, 213.06, -220.50958, 214.54993, 178.79156, 213.06)
 width = 65.0
-texture = ExtResource("4_5vw27")
+texture = SubResource("CompressedTexture2D_xuqvo")
 texture_mode = 1
 joint_mode = 2
 
@@ -9810,6 +9820,33 @@ amount = 5000
 lifetime = 0.5
 preprocess = 0.3
 process_material = SubResource("ParticleProcessMaterial_4c57u")
+
+[node name="Path2D" type="Path2D" parent="Conveyor/OrangePart"]
+curve = SubResource("Curve2D_d13ii")
+
+[node name="GreenPart" parent="Conveyor" instance=ExtResource("3_0odxb")]
+position = Vector2(531, 329)
+texture = SubResource("CompressedTexture2D_qsp4k")
+conveyor_type = 2
+
+[node name="Green" parent="Conveyor/GreenPart" index="0"]
+material = SubResource("ShaderMaterial_kq58d")
+texture = SubResource("CompressedTexture2D_seu75")
+
+[node name="Path2D" type="Path2D" parent="Conveyor/GreenPart"]
+curve = SubResource("Curve2D_1u8w0")
+
+[node name="YellowPart" parent="Conveyor" instance=ExtResource("4_0odxb")]
+position = Vector2(531, 329)
+texture = SubResource("CompressedTexture2D_d13ii")
+
+[node name="Yellow" parent="Conveyor/YellowPart" index="0"]
+material = SubResource("ShaderMaterial_1u8w0")
+points = PackedVector2Array(344.17383, 271.16724, 29.798584, -248.81827, -193.69086, 138.56348)
+texture = SubResource("CompressedTexture2D_0odxb")
+
+[node name="Path2D" type="Path2D" parent="Conveyor/YellowPart"]
+curve = SubResource("Curve2D_0odxb")
 
 [node name="Polygon2D" type="Polygon2D" parent="Conveyor"]
 color = Color(0.29803923, 0.29803923, 0.29803923, 1)
@@ -10185,3 +10222,4 @@ animation = &"wolf_man_back"
 offset = Vector2(0, 0.1)
 
 [editable path="Conveyor/GreenPart"]
+[editable path="Conveyor/YellowPart"]

@@ -10,21 +10,29 @@ enum ConveyorType { EAST, WEST, SOUTH }
 var plates_in_inner_area: Array[Plate] = []
 var plate_queue: Array[Plate] = []
 
-const FOLLOWER = preload("uid://d2o3i1h73rjtg")
 const TEST_ITEM = preload("uid://x3y1ik8cibo5")
+const CONVEYOR_FOLLOWER = preload("uid://pgpgaakk3b8f")
+
+@onready var path_2d = $Path2D
 
 func _ready():
 	var mat := conveyor.material as ShaderMaterial
 	mat.set_shader_parameter("speed", Vector2(-3, 0))
+	path_2d.curve.clear_points()
+	for p in conveyor.points:
+		path_2d.curve.add_point(p)
 	#mat.set_shader_parameter("tint_color", Color.RED)
 	spawn_follow()
 	
 func spawn_follow():
-	var f: Follower = FOLLOWER.instantiate()
-	f.follow_line = conveyor
-	add_child(f)
+	var g: = CONVEYOR_FOLLOWER.instantiate()
+	path_2d.add_child(g)
 	var s = TEST_ITEM.instantiate()
-	f.add_follower(s)
+	
+	if not g.is_node_ready():
+		await g.ready
+		
+	g.add_child(s)
 	await get_tree().create_timer(1.5).timeout
 	spawn_follow()
 

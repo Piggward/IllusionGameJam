@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pgpgaakk3b8f"]
+
+[ext_resource type="Script" uid="uid://do40nmn8go00p" path="res://path_follow_2d.gd" id="1_2wj53"]
+
+[node name="PathFollow2D" type="PathFollow2D"]
+script = ExtResource("1_2wj53")
