@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1vpfxslpbyty"]
+
+[ext_resource type="Script" uid="uid://df0iqdv8t8r5a" path="res://Components/Sushi/sushi_ui.gd" id="1_fer2l"]
+[ext_resource type="Texture2D" uid="uid://c24nqjtivjydl" path="res://Components/Sushi/Art/Sushi roll 1.png" id="2_obt5p"]
+[ext_resource type="Shader" uid="uid://c6vv2ju43aus6" path="res://Components/Sushi/outline.gdshader" id="2_wuw11"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u8w0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_751sc"]
+shader = ExtResource("2_wuw11")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.4000000208616101
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[node name="PanelContainer4" type="PanelContainer"]
+self_modulate = Color(0.07058824, 0.69803923, 0.2, 0.64705884)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1u8w0")
+script = ExtResource("1_fer2l")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_751sc")
+layout_mode = 2
+texture = ExtResource("2_obt5p")
+expand_mode = 2
+stretch_mode = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -3,4 +3,6 @@
 [ext_resource type="Script" uid="uid://do40nmn8go00p" path="res://path_follow_2d.gd" id="1_2wj53"]
 
 [node name="PathFollow2D" type="PathFollow2D"]
+rotates = false
+loop = false
 script = ExtResource("1_2wj53")
